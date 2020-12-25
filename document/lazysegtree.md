@@ -207,7 +207,7 @@ void push(int k)
   ```cpp
   using S = int;
   using F = int;
-  const S IE = 1001001001;
+  constexpr S IE = 1001001001;
   S op(S a, S b) { return min(a, b);}
   S e() { return IE;}
   S mapping(F f, S s) { return f+s;}
