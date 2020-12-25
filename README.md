@@ -2,7 +2,7 @@
 
 ## 概要
 
-- 僕が普段使っているC++ライブラリです．
+- 僕が普段使っているC++プログラミングコンテスト用ライブラリです．
 - プログラミングコンテストチャレンジブック，[AtCoder Live Library](https://github.com/atcoder/live_library)，[AtCoder Library](https://github.com/atcoder/ac-library) から取ってきたものがほとんどです．
 
 ## 注意
