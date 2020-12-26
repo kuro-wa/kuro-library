@@ -29,8 +29,6 @@ vector<T> compress(vector<T> v)
 map<T, int> dict(const vector<T> &v)
 ```
 
-`x` のすべての約数を昇順で返します．
-
 - `compress` : 座標の重複を取り除き，昇順に並べ替えたものを返します．
 - `dict` : 元の座標が，圧縮後に何番目にあるかを返します．
 
