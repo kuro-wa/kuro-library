@@ -20,10 +20,10 @@
 
 ### 便利道具
 
-| ドキュメント                     | コード                       | 概要                     |
-| :------------------------------- | ---------------------------- | ------------------------ |
-| [Tool](document/tool.md)         | [tool.hpp](kuro/tool.hpp)    | 便利関数詰め合わせ       |
-| [Marathon](document/marathon.md) | [marathon.hpp](marathon.hpp) | マラソン用関数詰め合わせ |
+| ドキュメント                     | コード                            | 概要                     |
+| :------------------------------- | --------------------------------- | ------------------------ |
+| [Tool](document/tool.md)         | [tool.hpp](kuro/tool.hpp)         | 便利関数詰め合わせ       |
+| [Marathon](document/marathon.md) | [marathon.hpp](kuro/marathon.hpp) | マラソン用関数詰め合わせ |
 
 
 ### データ構造
