@@ -24,7 +24,7 @@ using namespace kuro;
 
 ## 提出
 
-`expander.py` を使ってライブラリの内容を展開できます．例えば，`main.cpp` を展開して提出用ファイル `submit.cpp` を作成したいときは，以下のコマンドを実行してください．
+`expander.py` を使ってライブラリの内容を展開できます．例えば，`main.cpp` を展開して提出用ファイル `submit.cpp` を作成したいときは，次のコマンドを実行してください．
 
 ```shell
 python3 expander.py main.cpp submit.cpp
