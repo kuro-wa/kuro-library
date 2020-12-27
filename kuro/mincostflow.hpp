@@ -98,14 +98,14 @@ struct MinCostFlow {
   vector<pair<V_id, E_id>> pos;
   vector<vector<_edge>> g;
   vector<Cap> b;
-  static Cost constexpr infinity = numeric_limits<Cost>::max();
+  static Cost constexpr cost_inf = numeric_limits<Cost>::max();
   Cost farthest;
   vector<Cost> potential;
   vector<Cost> dist;
   vector<_edge*> parent;
   vector<V_id> excess_vs, deficit_vs;
   bool dual_ref() {
-    dist.assign(_n, infinity);
+    dist.assign(_n, cost_inf);
     parent.assign(_n, nullptr);
     excess_vs.erase(remove_if(excess_vs.begin(), excess_vs.end(),
                               [&](V_id v) { return b[v] <= 0;}),
