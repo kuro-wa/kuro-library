@@ -3,7 +3,7 @@
 
 namespace kuro {
 
-const double eps = 1e-10;
+constexpr double eps = 1e-10;
 bool equal(double a, double b) { return abs(a-b) < eps;}
 
 // 2D vector
