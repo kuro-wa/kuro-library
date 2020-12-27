@@ -46,7 +46,7 @@
 | [Matrix](document/matrix.md)                          | [matrix.hpp](kuro/matrix.hpp)     | 行列                       |
 | [Gaussian Elimination](document/gaussian.md)          | [gaussian.hpp](kuro/gaussian.hpp) | ガウスの消去法             |
 | [Kitamasa Method](document/kitamasa.md)               | [kitamasa.hpp](kuro/kitamasa.hpp) | Kitamasa法                 |
-| [Geometry](document/geometry.md)                      | [geometry.hpp](geometry.hpp)      | 幾何学図形詰め合わせ       |
+| [Geometry](document/geometry.md)                      | [geometry.hpp](kuro/geometry.hpp)      | 幾何学図形詰め合わせ       |
 
 ### グラフ
 
