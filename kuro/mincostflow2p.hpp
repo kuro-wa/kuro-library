@@ -60,16 +60,17 @@ struct MinCostFlow2P {
     assert(0 <= s && s < _n);
     assert(0 <= t && t < _n);
     assert(s != t);
-    Cost infinity = numeric_limits<Cost>::max();
+    Cost cost_inf = numeric_limits<Cost>::max();
     vector<Cost> dual(_n), dist(_n);
-    vector<int> pv(_n), pe(_n), vis(_n);
+    vector<int> pv(_n), pe(_n);
+    vector<char> vis(_n);
     if (negative) {
-      fill(dist.begin(), dist.end(), infinity);
+      fill(dist.begin(), dist.end(), cost_inf);
       dist[s] = 0;
       for (int cnt = 0; cnt < _n-1; ++cnt) {
         bool update = false;
         for (int v = 0; v < _n; ++v) {
-          if (dist[v] == infinity) continue;
+          if (dist[v] == cost_inf) continue;
           for (_edge& e : g[v]) {
             if (e.cap > 0 && dist[e.to]-dist[v] > e.cost) {
               dist[e.to] = dist[v]+e.cost;
@@ -84,7 +85,7 @@ struct MinCostFlow2P {
       }
     };
     auto dual_ref = [&]() {
-      fill(dist.begin(), dist.end(), infinity);
+      fill(dist.begin(), dist.end(), cost_inf);
       fill(pv.begin(), pv.end(), -1);
       fill(pe.begin(), pe.end(), -1);
       fill(vis.begin(), vis.end(), 0);
@@ -119,7 +120,7 @@ struct MinCostFlow2P {
       return true;
     };
     Cap flow = 0;
-    Cost cost = 0, prev_cost_per_flow = infinity;
+    Cost cost = 0, prev_cost_per_flow = cost_inf;
     vector<pair<Cap, Cost>> result;
     result.emplace_back(flow, cost);
     while (flow < flow_limit){
