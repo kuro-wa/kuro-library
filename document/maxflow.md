@@ -10,7 +10,7 @@
 MaxFlow<Cap> graph(int n)
 ```
 
-`n` 頂点 $0$ 辺のグラフを作ります．`Cap` は容量の型です．
+$n$ 頂点 $0$ 辺のグラフを作ります．`Cap` は容量の型です．
 
 **制約**
 
@@ -35,7 +35,7 @@ MaxFlow<Cap> graph(int n)
 
 **制約**
 
-追加前の頂点数を $n$ として
+$n$ を追加前の頂点数として
 
 - (1) $0 \leq n + 1 \leq 10^8$
 
@@ -55,6 +55,8 @@ int graph.add_edge(int from, int to, Cap cap)
 `from` から `to` へ最大容量 `cap`，流量 $0$ の辺を追加し，何番目に追加された辺かを返します．
 
 **制約**
+
+$n$ を頂点数として
 
 - $0 \leq \mathrm{from}, \mathrm{to} \lt n$
 - $0 \leq \mathrm{cap}$
