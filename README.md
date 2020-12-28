@@ -67,3 +67,9 @@
 | [Lowest Common Ancestor](document/lca.md)      | [lca.hpp](kuro/lca.hpp)           | 最小共通祖先 |
 | [Centroid Decomposition](document/centroid.md) | [centroid.hpp](kuro/centroid.hpp) | 重心分解     |
 
+### 文字列
+
+| ドキュメント                            | コード                                  | 概要               |
+| :-------------------------------------- | --------------------------------------- | ------------------ |
+| [Rolling Hash](document/rollinghash.md) | [rollinghash.hpp](kuro/rollinghash.hpp) | ローリングハッシュ |
+
