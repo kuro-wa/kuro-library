@@ -50,8 +50,8 @@
 ## 値の取得
 
 ```cpp
-(1) m[i]
-(2) m[i][j]
+(1) vector<T> m[i]
+(2) T m[i][j]
 ```
 
 `vector<vector<T>>` と同様に行えます．
