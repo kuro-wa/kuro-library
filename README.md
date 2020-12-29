@@ -72,4 +72,5 @@
 | ドキュメント                            | コード                                  | 概要               |
 | :-------------------------------------- | --------------------------------------- | ------------------ |
 | [Rolling Hash](document/rollinghash.md) | [rollinghash.hpp](kuro/rollinghash.hpp) | ローリングハッシュ |
+| [Suffix Array](document/suffixarray.md) | [suffixarray.hpp](kuro/suffixarray.hpp) | 接尾辞配列         |
 
