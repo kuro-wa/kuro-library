@@ -11,15 +11,15 @@ struct SuffixArray {
     int n = s.size();
     sa.resize(n+1);
     iota(sa.begin(), sa.end(), 0);
-    vector<int> rank(n+1), tmp(n+1);
+    vector<int> rnk(n+1), tmp(n+1);
     for (int i = 0; i <= n; ++i) {
-      rank[i] = i < n ? s[i] : -1;
+      rnk[i] = i < n ? s[i] : -1;
     }
     for (int len = 1; len < n; len <<= 1) {
       auto cmp = [&](int a, int b) {
-        if (rank[a] != rank[b]) return rank[a] < rank[b];
-        int ra = a+len <= n ? rank[a+len] : -1;
-        int rb = b+len <= n ? rank[b+len] : -1;
+        if (rnk[a] != rnk[b]) return rnk[a] < rnk[b];
+        int ra = a+len <= n ? rnk[a+len] : -1;
+        int rb = b+len <= n ? rnk[b+len] : -1;
         return ra < rb;
       };
       sort(sa.begin(), sa.end(), cmp);
@@ -27,7 +27,7 @@ struct SuffixArray {
       for (int i = 1; i <= n; ++i) {
         tmp[sa[i]] = tmp[sa[i-1]]+(cmp(sa[i-1], sa[i]) ? 1 : 0);
       }
-      swap(rank, tmp);
+      swap(rnk, tmp);
     }
   }
   int operator[](int i) const { return sa[i];}
