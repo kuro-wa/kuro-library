@@ -96,13 +96,27 @@ $k$ を `t` の長さとして
 
 - $O(k \log n)$
 
+## get_lcp
+
+```cpp
+vector<int> sa.get_lcp()
+```
+
+列 `s` のLCP Arrayとして，長さ $n$ の配列を返します．$i$ 番目の要素は `s[sa[i]..n), s[sa[i+1]..n)` の LCP(Longest Common Prefix) の長さです．
+
+**計算量**
+
+- $O(n)$
+
 ## private変数，private関数
 
 ```cpp
 S _s;
 vector<int> sa;
+vector<int> rsa;
 ```
 
 - `_s` : 文字列，あるいは配列
 - `sa` : Suffix Array
+- `rsa` : `sa` の逆関数となる配列
 
