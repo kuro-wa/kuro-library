@@ -99,10 +99,10 @@ $k$ を `t` の長さとして
 ## get_lcp
 
 ```cpp
-vector<int> sa.get_lcp()
+LCPArray sa.get_lcp()
 ```
 
-列 `s` のLCP Arrayとして，長さ $n$ の配列を返します．$i$ 番目の要素は `s[sa[i]..n), s[sa[i+1]..n)` の LCP(Longest Common Prefix) の長さです．
+列 `s` のLCP Arrayとして，長さ $n$ の列の構造体 `lcp` を返します．$i$ 番目の要素は `lcp[i]` で取得でき， `s[sa[i]..n), s[sa[i+1]..n)` の LCP (Longest Common Prefix) の長さです．また，`lcp.query(a, b)` で`s[a..n), s[b..n)` の LCPの長さを取得できます (計算量 $O(\log n)$)．
 
 **計算量**
 
