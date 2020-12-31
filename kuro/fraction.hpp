@@ -4,7 +4,7 @@
 namespace kuro {
 
 // Fraction
-template<typename T=int64_t>
+template<typename T>
 struct Fraction {
  public:
   Fraction(T num_=0) : num(num_), den(1) {}
