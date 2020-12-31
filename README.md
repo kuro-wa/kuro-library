@@ -24,6 +24,7 @@
 | :------------------------------- | --------------------------------- | ------------------------ |
 | [Tool](document/tool.md)         | [tool.hpp](kuro/tool.hpp)         | 便利関数詰め合わせ       |
 | [Marathon](document/marathon.md) | [marathon.hpp](kuro/marathon.hpp) | マラソン用関数詰め合わせ |
+| [Mod int](document/modint.md)                         | [modint.hpp](kuro/modint.hpp)     | 自動mod                    |
 
 
 ### データ構造
@@ -39,7 +40,6 @@
 
 | ドキュメント                                          | コード                            | 概要                       |
 | :---------------------------------------------------- | --------------------------------- | -------------------------- |
-| [Mod int](document/modint.md)                         | [modint.hpp](kuro/modint.hpp)     | 自動mod                    |
 | [Math](document/math.md)                              | [math.hpp](kuro/math.hpp)         | 数論アルゴリズム詰め合わせ |
 | [Sieve of Eratosthenes](document/sieve.md)            | [sieve.hpp](kuro/sieve.hpp)       | エラトステネスの篩         |
 | [Segment Sieve of Eratosthenes](document/segsieve.md) | [segsieve.hpp](kuro/segsieve.hpp) | 区間エラトステネスの篩     |
