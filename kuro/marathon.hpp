@@ -12,7 +12,7 @@ double get_time() {
   return ms-START_TIME;
 }
 
-// Random number generator
+// Random Number Generator
 struct RandGenerator {
  public:
   RandGenerator(uint32_t seed=3141592653ul) : val(seed) {}
@@ -33,7 +33,7 @@ struct RandGenerator {
   uint32_t val;
 };
 
-// 1000 separator
+// 1000 Separator
 template<typename T>
 string sep1000(T a) {
   string s = to_string(a), res;
