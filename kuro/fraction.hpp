@@ -60,7 +60,7 @@ struct Fraction {
   friend bool operator>(const Fraction& lhs, const Fraction& rhs) { return rhs < lhs;}
   friend bool operator<=(const Fraction& lhs, const Fraction& rhs) { return !(rhs < lhs);}
   friend bool operator>=(const Fraction& lhs, const Fraction& rhs) { return !(lhs < rhs);}
-  friend ostream& operator<<(ostream& os, const Fraction& a) { return os << a.num << " / " << a.den;}
+  friend ostream& operator<<(ostream& os, const Fraction& a) { return os << a.num << "/" << a.den;}
   explicit operator double() const { return (double)num/den;}
   template <typename Int> explicit operator Int() const { return static_cast<Int>(num/den);}
  private:
