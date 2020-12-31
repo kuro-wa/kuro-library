@@ -46,7 +46,7 @@ struct Fraction {
     return Fraction(lhs.num*rhs.num, lhs.den*rhs.den);
   }
   friend Fraction operator/(const Fraction& lhs, const Fraction& rhs) {
-    return Fraction(lhs.num*rhs.frm, lhs.den*rhs.num);
+    return Fraction(lhs.num*rhs.den, lhs.den*rhs.num);
   }
   friend bool operator==(const Fraction& lhs, const Fraction& rhs) {
     return lhs.num*rhs.den == rhs.num*lhs.den;
