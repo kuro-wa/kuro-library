@@ -25,6 +25,7 @@
 | [Tool](document/tool.md)         | [tool.hpp](kuro/tool.hpp)         | 便利関数詰め合わせ       |
 | [Marathon](document/marathon.md) | [marathon.hpp](kuro/marathon.hpp) | マラソン用関数詰め合わせ |
 | [Mod int](document/modint.md)                         | [modint.hpp](kuro/modint.hpp)     | 自動mod                    |
+| [Fraction](document/fraction.md) | [fraction.hpp](kuro/fraction.hpp) | 分数 |
 
 
 ### データ構造
