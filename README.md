@@ -48,6 +48,8 @@
 | [Gaussian Elimination](document/gaussian.md)          | [gaussian.hpp](kuro/gaussian.hpp) | ガウスの消去法             |
 | [Kitamasa Method](document/kitamasa.md)               | [kitamasa.hpp](kuro/kitamasa.hpp) | Kitamasa法                 |
 | [Geometry](document/geometry.md)                      | [geometry.hpp](kuro/geometry.hpp)      | 幾何学図形詰め合わせ       |
+| [Mod Factorial](document/modfactorial.md) | [modfactorial.hpp](kuro/modfactorial.hpp) | 階乗の余り |
+| [Small Mod Factorial](document/smallmodfactorial.md) | [smallmodfactorial.hpp](kuro/smallmodfactorial.hpp) | 階乗の余り (modが小) |
 
 ### グラフ
 
