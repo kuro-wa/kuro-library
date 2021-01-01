@@ -61,9 +61,9 @@ $x^n \bmod m$ を返します．
 map<int64_t, int> moebius(int64_t n)
 ```
 
-`n` の約数についてメビウス関数 $\mu$ を構築します．キーに `n` の約数 $d$，値に $\mu(d)$ が入ります．
+$n$ の約数についてメビウス関数 $\mu$ を構築します．キーに $n$ の約数 $d$，値に $\mu(d)$ が入ります．
 
-メビウスの反転公式「$\displaystyle g(n) = \sum_{d|n} f(d)$ のとき $\displaystyle f(n) = \sum_{d|n} \mu(d) g(\frac{n}{d})$」の証明は[こちら](https://mathtrain.jp/mobiusinversion)．
+メビウスの反転公式「$\displaystyle g(n) = \sum_{d|n} f(d)$ のとき $\displaystyle f(n) = \sum_{d|n} \mu(d) \, g(\frac{n}{d})$」の証明は[こちら](https://mathtrain.jp/mobiusinversion)．
 
 **制約**
 
