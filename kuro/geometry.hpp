@@ -14,7 +14,15 @@ struct Point {
   Point operator+(const Point& p) const { return Point(x+p.x, y+p.y);}
   Point operator-(const Point& p) const { return Point(x-p.x, y-p.y);}
   Point operator*(T a) const { return Point(x*a, y*a);}
+  bool operator==(const Point& p) const { return x == p.x && y == p.y;}
+  bool operator<(const Point& p) const {
+    if (x == p.x) return y < p.y;
+    return x < p.x;
+  }
   friend Point operator*(T a, const Point& p) { return p*a;}
+  friend bool operator==(const Point& lhs, const Point& rhs) { return lhs.x == rhs.x && lhs.y == rhs.y;}
+  friend bool operator!=(const Point& lhs, const Point& rhs) { return !(lhs == rhs);}
+  friend bool operator<(const Point& lhs, const Point& rhs) {  return lhs.x == rhs.x ? lhs.y < rhs.y : lhs.x < rhs.x;}
   friend ostream& operator<<(ostream& os, const Point& p) { return os<<'('<<p.x<<','<<p.y<<')';}
   friend istream& operator>>(istream& is, Point& p) { return is>>p.x>>p.y;}
   T dot(const Point& p) { return x*p.x+y*p.y;}
