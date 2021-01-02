@@ -31,7 +31,7 @@ SmallModFactoriall<modint> d()
 modint d.comb(int64_t n, int64_t k)
 ```
 
-$_n C_k {\ } \pmod{p}$ を返します．
+$_n C_k \pmod{p}$ を返します．
 
 **制約**
 
