@@ -1,5 +1,6 @@
 #ifndef KURO_RSQ_HPP
 #define KURO_RSQ_HPP 1
+
 #include <kuro/lazysegtree>
 
 namespace kuro {
@@ -9,12 +10,15 @@ template<typename T, typename F=T>
 struct RSQ {
  public:
   RSQ(int n=0) : RSQ(vector<T>(n, T(0))) {}
-  RSQ(const vector<T>& v) {
-    int n = int(v.size());
-    vector<S> w(n);
-    for (int i = 0; i < n; ++i) w[i] = S(v[i], 1);
-    d = LazySegTree<S, op, e, F, mapping, composition, id>(w);
-  }
+  RSQ(const vector<T>& v)
+    : d([](const vector<T>& v)
+    {
+      int n = v.size();
+      vector<S> w(n);
+      for (int i = 0; i < n; ++i) w[i] = S(v[i], 1);
+      return w;
+    }(v)) 
+  {}
   void set(int p, T x) { d.set(p, S(x, 1));}
   T get(int p) { return d.get(p).x;}
   T prod(int l, int r) { return d.prod(l, r).x;}
