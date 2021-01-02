@@ -28,7 +28,7 @@ SmallModFactoriall<modint> d()
 ## comb
 
 ```cpp
-Mint comb(int64_t n, int64_t k)
+modint d.comb(int64_t n, int64_t k)
 ```
 
 $_n C_k {\ } \pmod{p}$ を返します．
@@ -45,8 +45,8 @@ $_n C_k {\ } \pmod{p}$ を返します．
 
 ```cpp
 int p;
-vector<Mint> fact;
-pair<Mint, int64_t> extract(int64_t n);
+vector<modint> fact;
+pair<modint, int64_t> extract(int64_t n);
 ```
 
 - `p` : 法
