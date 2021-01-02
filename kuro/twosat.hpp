@@ -1,5 +1,6 @@
 #ifndef KURO_TWOSAT_HPP
 #define KURO_TWOSAT_HPP 1
+
 #include <kuro/scc>
 
 namespace kuro {

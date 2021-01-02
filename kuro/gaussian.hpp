@@ -1,5 +1,6 @@
 #ifndef KURO_GAUSSIAN_HPP
 #define KURO_GAUSSIAN_HPP 1
+
 #include <kuro/matrix>
 
 namespace kuro {

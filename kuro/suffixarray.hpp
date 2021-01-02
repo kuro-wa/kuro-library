@@ -1,5 +1,6 @@
 #ifndef KURO_SUFFIXARRAY_HPP
 #define KURO_SUFFIXARRAY_HPP 1
+
 #include <kuro/segtree>
 
 namespace kuro {

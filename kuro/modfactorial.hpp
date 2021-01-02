@@ -1,5 +1,6 @@
 #ifndef KURO_MODFACTORIAL_HPP
 #define KURO_MODFACTORIAL_HPP 1
+
 #include <kuro/modint>
 
 namespace kuro {
