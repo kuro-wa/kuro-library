@@ -3,7 +3,7 @@
 
 namespace kuro {
 
-void _op(int& a, int& b) { return;}
+void _op(char& a, char& b) { return;}
 
 // Union-Find Tree
 template<typename T=char, void (*op)(T&, T&)=_op>
