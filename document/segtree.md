@@ -176,14 +176,14 @@ S seg.all_prod()
 ## private変数，private関数
 
 ```cpp
-int _n
+int n
 int size
 vector<S> d
 void update(int k)
 ```
 
-- `_n` : `a` の要素数．
-- `size` : `_n` より大きい最小の $2$ の累乗数．
+- `n` : `a` の要素数．
+- `size` : `n` より大きい最小の $2$ の累乗数．
 - `d` : データを管理する配列．
 - `update` : `d[k]` の値を更新する関数．
 

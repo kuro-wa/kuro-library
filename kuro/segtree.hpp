@@ -7,31 +7,31 @@ namespace kuro {
 template<typename S, S (*op)(S, S), S(*e)()>
 struct SegTree {
  public:
-  SegTree(int n=0): SegTree(vector<S>(n, e())) {}
-  SegTree(const vector<S>& v) : _n(int(v.size())) {
+  SegTree(int n_=0) : SegTree(vector<S>(n_, e())) {}
+  SegTree(const vector<S>& v) : n(int(v.size())) {
     size = 1;
-    while (size < _n) size <<= 1;
+    while (size < n) size <<= 1;
     d = vector<S>(2*size, e());
-    for (int i = 0; i < _n; ++i) d[size+i] = v[i];
+    for (int i = 0; i < n; ++i) d[size+i] = v[i];
     for (int i = size-1; i >= 1; --i) {
       update(i);
     }
   }
   S get(int p) {
-    assert(0 <= p && p < _n);
+    assert(0 <= p && p < n);
     return d[p+size];
   }
   void set(int p, S x) {
-    assert(0 <= p && p < _n);
+    assert(0 <= p && p < n);
     d[p += size] = x;
     while (p >>= 1) update(p);
   }
   void add(int p, S x) {
-    assert(0 <= p && p < _n);
+    assert(0 <= p && p < n);
     set(p, op(get(p), x));
   }
   S prod(int l, int r) {
-    assert(0 <= l && l <= r && r <= _n);
+    assert(0 <= l && l <= r && r <= n);
     S sml = e(), smr = e();
     l += size;
     r += size;
@@ -48,9 +48,9 @@ struct SegTree {
     return max_right(l, [](S x) { return f(x);});
   }
   template<typename F> int max_right(int l, F f) {
-    assert(0 <= l && l <= _n);
+    assert(0 <= l && l <= n);
     assert(f(e()));
-    if (l == _n) return _n;
+    if (l == n) return n;
     l += size;
     S sm = e();
     do {
@@ -68,13 +68,13 @@ struct SegTree {
       sm = op(sm, d[l]);
       ++l;
     } while ((l&-l) != l);
-    return _n;
+    return n;
   }
   template<bool (*f)(S)> int min_left(int r) {
     return min_left(r, [](S x) { return f(x);});
   }
   template<typename F> int min_left(int r, F f) {
-    assert(0 <= r && r <= _n);
+    assert(0 <= r && r <= n);
     assert(f(e()));
     if (r == 0) return 0;
     r += size;
@@ -97,7 +97,7 @@ struct SegTree {
     return 0;
   }
  private:  
-  int _n, size;
+  int n, size;
   vector<S> d;
   void update(int k) { d[k] = op(d[2*k], d[2*k+1]);}
 };
