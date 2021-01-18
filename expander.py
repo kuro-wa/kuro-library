@@ -14,11 +14,11 @@ logger = getLogger(__name__)  # type: Logger
 
 class Expander:
     local_include = re.compile(
-        r'#include\s*"([a-z_]*(|.hpp))"\s*')
-    atcoder_include = re.compile(
-        r'#include\s*["<](kuro/[a-z_]*(|.hpp))[">]\s*')
+        r'#include\s*"([0-9a-z_]*(|.hpp))"\s*')
+    kuro_include = re.compile(
+        r'#include\s*["<](kuro/[0-9a-z_]*(|.hpp))[">]\s*')
 
-    include_guard = re.compile(r'#.*KURO_[A-Z_]*_HPP')
+    include_guard = re.compile(r'#.*KURO_[0-9A-Z_]*_HPP')
 
     def is_ignored_line(self, line) -> bool:
         if self.include_guard.match(line):
@@ -56,7 +56,7 @@ class Expander:
             if self.is_ignored_line(line):
                 continue
 
-            m = self.atcoder_include.match(line)
+            m = self.kuro_include.match(line)
             if m:
                 name = m.group(1)
                 result.extend(self.expand_kuro(self.find_kuro(name)))
@@ -76,7 +76,7 @@ class Expander:
         self.included = set()
         result = []  # type: List[str]
         for line in source.splitlines():
-            m = self.atcoder_include.match(line)
+            m = self.kuro_include.match(line)
             if m:
                 kuro_path = self.find_kuro(m.group(1))
                 result.extend(self.expand_kuro(kuro_path))
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     parser.add_argument('submit', default='submit.cpp', help='Submit File')
     parser.add_argument('-c', '--console',
                         action='store_true', help='Print to Console')
-    parser.add_argument('--lib', help='Path to Atcoder Library')
+    parser.add_argument('--lib', help='Path to kuro Library')
     opts = parser.parse_args()
 
     lib_paths = []
